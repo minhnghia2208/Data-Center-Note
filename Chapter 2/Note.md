@@ -2,7 +2,7 @@
     - Pros of datacenter:
         - Parrellism: 1 process can be ran in different servers
         - Workload churn: Clients are abstracted away from servers. Thus, software can be frequently updated without interuptting users
-    - Platform homogenity: All servers has same config, unlike desktop software where each desktop config is different
+        - Platform homogenity: All servers has same config, unlike desktop software where each desktop config is different
 
 # 2.2 Performance and availability toolbox
     Some common methods that improve performance and availability
@@ -36,4 +36,44 @@
     - Redundant execution and tail tolerance:
         - Refer to 2.8
         - Performance
-        
+
+## Platform Level Infrastructure
+    - Kernel: 
+        - An abstract layer between hardware and software
+        - It handles I/O, manages resources (memory, processors)
+        - Kernel is loaded into memory when computer is booting up, and is released when computer shuts down
+    - Firmware:
+        - Store in ROM
+        - It gives devices instructions on how to start-up, communicate with other devices
+## Cluster Level Infrastructure
+    1. Resource Management:
+        - Allocating resources/machines to given user/job
+    2. Hardware abstraction:
+        - Reliable distributed storage (Database)
+        - Message passing
+        - Cluster-level synchronization
+    3. Deployment and Maintanence
+        - Image distribution
+        - Configure management
+    4. Programming framework
+## Application Level Infrastructure
+    - It is better to have a general-purpose hardwares because of:
+        1. Diverse requirements: There are many software requirements that require different specilized hardwares
+        2. It is easier and faster to make better algorithm than updating hardware
+
+## Monitoring Infrastructure
+    - Service-level Dashboards:
+        - Avoid server disruption
+        - Health check alert should be fine tune so that it would not send false positive alert, and it would not send alert too late
+    - Perforamce debugging tools or Distributed system tracing:
+        - Identify performance bottleneck
+        - Does not require real time feed back like Service-level Dashboards
+        - There are two types of tools:
+            1. Black-box monitoring systems
+            2. Application/middleware instrumentation systems
+    - Platform-level health monitoring:
+        - Health check for the whole system (software + hardware)
+        - Cluster-level infra and application-level software are designed to tolerate hardwares failures, only monitoring at software level can miss hardware problem. Thus, if a problem is accumulated unoticed, disruption might occurs
+
+## Buy vs Build
+    -
