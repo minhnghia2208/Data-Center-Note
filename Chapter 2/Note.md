@@ -76,4 +76,16 @@
         - Cluster-level infra and application-level software are designed to tolerate hardwares failures, only monitoring at software level can miss hardware problem. Thus, if a problem is accumulated unoticed, disruption might occurs
 
 ## Buy vs Build
-    -
+    - Built:
+        - Pros:
+            1. Flexible, quick turn-around time
+            2. Cost efficiency
+            3. Simpler and faster since in-house services only solve what is needed
+        - Cons:
+            1. Require more software development
+            2. Require mantainance
+
+## Tail-tolerance
+    - Tail-latency is the latency of slowest requests
+    - When system is large enough, it's impossible to avoid performance variability
+    - Dean & Barroso proposed a programming method that takes advantage of resource replication. This tail-tolerant technique delivers low tail-latency
